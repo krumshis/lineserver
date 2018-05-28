@@ -6,7 +6,7 @@ from django.apps import AppConfig
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.views.decorators.http import require_http_methods
 
-from .local_settings import START_DIR, BIG_FILE_NAME, FILE_SIZE, PROCESSED_INPUT_DIR
+from .local_settings import BIG_FILE_NAME, FILE_SIZE, PROCESSED_INPUT_DIR
 
 lines_registry = {}
 
@@ -30,8 +30,9 @@ class LinesConfig(AppConfig):
 # processed_input under home directory.
 def preprocess_input():
     global lines_registry
-    input_path = os.path.join(START_DIR, BIG_FILE_NAME)
-    new_dir = os.path.join(START_DIR, PROCESSED_INPUT_DIR)
+    cwd = os.getcwd()
+    input_path = os.path.join(cwd, BIG_FILE_NAME)
+    new_dir = os.path.join(cwd, PROCESSED_INPUT_DIR)
     current_file_number = 0
     current_file_size = 0
     current_path = os.path.join(new_dir, str(current_file_number))
