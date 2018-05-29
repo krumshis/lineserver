@@ -24,6 +24,17 @@ You’ve started the Django development server, a lightweight Web server written
 ```
 By no means it is suposed to accept production volumes. Plus, adding the restrictions of PythonAnywhere, here is what we have.
 I couldn't test with even 1GB file - it was my total memory limit - on almost 28MB and 5 users it's fast. PythonAnywhere promises to allow 100,000 hits per day. With original file size getting bigger, the size of the chunk needs to be adjusted, i.e. increased ```newlinepr/lines/local_settings.py```.
-All that being said the all should hold fine with the file size less 
+
+Suppose I pay for more memory: then I believe the app would hold well up to 10G file size. Django supports multithreading and together with promised 100K hits per day it should be OK. Bigger files, like 100G, would slow down the app - both at startup and at serving.
 
 _NOTE_: if database can't be used, then splitting large file in chunks is the way to speed things up, and in real situation we should be talking not only of splitting the file, but of sharding the chunks between servers, having a dispatcher to keep track of which shard has what parts; plus getting multiple servers and load balancers to serve from these shards (and of course keep multiple copies of all all sharded data...).
+
+### What did I use?
+
+ 1. Public platform  [PythonAnywhere](https://www.pythonanywhere.com), their domain and services, pre-installed environment:
+      * bash shell
+      * Python 2.7
+      * django 1.10
+ 2. [django documentation](https://docs.djangoproject.com/en/1.10/intro/)
+ 3. [Stack Overflow](https://stackoverflow.com/)
+ 
