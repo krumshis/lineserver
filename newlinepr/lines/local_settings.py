@@ -3,6 +3,6 @@
 # actually small, just enough to see that splitting, indesing and retrieving works.
 # The file was found on the web and is the ebook from Project Guttenberg:
 # "The Adventures of Sherlock Holmes" by Sir Arthur Conan Doyl
-FILE_SIZE = 10000
+CHUNK_SIZE = 10000
 BIG_FILE_NAME = "big_file"
 PROCESSED_INPUT_DIR = "processed_input"
