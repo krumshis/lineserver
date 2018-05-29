@@ -4,9 +4,9 @@
 
 This is a very simple django-based web application. URL to use is [http://katyrumshisky.pythonanywhere.com/lines](http://katyrumshisky.pythonanywhere.com/lines). To build this app I used public service [PythonAnywhere](https://www.pythonanywhere.com) - an online integrated development environment and web hosting service based on the Python programming language. I chose it because I don't have other available resources at hand: my home PC would require a lot of tinkering with environment and for obvious reasons I couldn't use work resources.
 But from using public domain come serious restrictions. I paid $5 for a basic account and it gets me the following:
-    * 1 web app on their domain name
-    * enough power to withstand 100,000 hit/day website
-    * 1GB disk space
+ * 1 web app on their domain name 
+ * enough power to withstand 100,000 hit/day website
+ * 1GB disk space
 With all that in hand I made the app.
 
 ### How does it work?
