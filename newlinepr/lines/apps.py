@@ -6,7 +6,7 @@ from django.apps import AppConfig
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.views.decorators.http import require_http_methods
 
-from .local_settings import BIG_FILE_NAME, FILE_SIZE, PROCESSED_INPUT_DIR
+from .local_settings import BIG_FILE_NAME, CHUNK_SIZE, PROCESSED_INPUT_DIR
 
 lines_registry = {}
 
@@ -45,7 +45,7 @@ def preprocess_input():
         for line in f:
             # Can this line fit in the current file?
             # If not - cloe this one and open another.
-            if current_file_size + len(line) > FILE_SIZE:
+            if current_file_size + len(line) > CHUNK_SIZE:
                 current_file_number +=1
                 current_file_size = 0
                 try:
