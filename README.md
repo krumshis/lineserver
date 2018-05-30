@@ -38,3 +38,27 @@ _NOTE_: if database can't be used, then splitting large file in chunks is the wa
  2. [django documentation](https://docs.djangoproject.com/en/1.10/intro/)
  3. [Stack Overflow](https://stackoverflow.com/)
  
+
+### How much time did I spend on it and what could I have done better
+
+I did the problem all in 1 day:
+ * found the platform where to do the exercise
+ * wrote pre-processing function
+ * followed django tutorial and creating a project and an app
+ * spent some time on StackOverflow before I figured out how to make pre-processing run once at server start
+ * put a picture of a library (google images) as favicon at the root URL
+ * put everything in GitHub
+ 
+From the very beginning I was coding a very limited solution. I was pressed for time because I received the problem around 3 weeks prior, but due to family circumstances couldn't work on it. Now I felt I had to have the result fast.
+
+If I had unlimited time I would:
+ 1. set up environment on my PC, install software, like: 
+      * install Python and django 
+      * figure out what do I need to get apache
+ 2. In the project itself I'd start with the following: 
+      * pass file name as an argument 
+      * make it optional - store line registry (write it to another file) and read it at the start of server as another option 
+      * allow to add data files (and append stuff to line registry) as another option 
+
+That's what comes immediately to mind. Other things will be - prettying UI a little bit.
+     
