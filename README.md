@@ -7,7 +7,8 @@ But from using public domain come serious restrictions. I paid $5 for a basic ac
  * 1 web app on their domain name 
  * enough power to withstand 100,000 hit/day website
  * 1GB disk space
-With all that in hand I made the app.
+ 
+With all that in hand I made the app. Big data file (~28MB) is made of strung together several large text files downloaded from [Project Gutenberg](http://www.gutenberg.org/)
 
 ### How does it work?
 The top directory ```newlinepr``` contains everything I need. From the command line from this directory I do:
@@ -41,7 +42,7 @@ _NOTE_: if database can't be used, then splitting large file in chunks is the wa
 
 ### How much time did I spend on it and what could I have done better
 
-I did the problem all in 1 day:
+I did the problem all in 1 workday (8 hours plus 1 extra hour for this README):
  * found the platform where to do the exercise
  * wrote pre-processing function
  * followed django tutorial and creating a project and an app
